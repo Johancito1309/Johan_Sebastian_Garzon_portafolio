@@ -1,0 +1,327 @@
+/* ===== 1. COLORES ===== */
+:root{
+  --azul:#0B1F3A;
+  --rojo:#D62839;
+  --lima:#B5E61D;
+  --amarillo:#FFC93C;
+  --sapote:#F28C28;
+  --gris:#F3F5F8
+}
+
+
+/* ===== 2. BASE ===== */
+/* Este espacio sirve es para*/
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:70px
+}
+
+body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  color:var(--azul);
+  line-height:1.6;
+  overflow-x:hidden
+}
+
+img{
+  max-width:100%
+}
+
+section{
+  padding:80px 5%
+}
+
+section>h2{
+  font-size:2.2rem;
+  margin-bottom:20px
+}
+
+h3,h4{
+  margin:14px 0 6px
+}
+
+p{
+  margin-bottom:10px
+}
+
+.oscuro{
+  background:var(--azul);
+  color:#fff
+}
+
+.claro{
+  background:var(--gris)
+}
+
+
+/* ===== 3. COLORES DE TARJETAS Y BOTONES ===== */
+.rojo{
+  background:var(--rojo);
+  color:#fff
+}
+
+.azul{
+  background:var(--azul);
+  color:#fff
+}
+
+.lima{
+  background:var(--lima);
+  color:var(--azul)
+}
+
+.amarillo{
+  background:var(--amarillo);
+  color:var(--azul)
+}
+
+.sapote{
+  background:var(--sapote);
+  color:var(--azul)
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 24px;
+  margin:6px 6px 0 0;
+  border-radius:30px;
+  border:0;
+  font-size:1rem;
+  font-weight:600;
+  text-decoration:none;
+  cursor:pointer
+}
+
+.btn.borde{
+  border:2px solid #fff;
+  color:#fff
+}
+
+/* ===== 4. TARJETAS (se acomodan solas en computador, tablet y celular) ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  margin-top:16px
+}
+
+.card,details{
+  background:#fff;
+  color:var(--azul);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 4px 14px rgba(0,0,0,.12)
+}
+
+.card.claro{
+  background:var(--gris)
+}
+
+.card.amarillo{
+  background:var(--amarillo)
+}
+
+.card.azul{
+  background:var(--azul);
+  color:#fff
+}
+
+.card.vacia{
+  background:transparent;
+  border:2px dashed #8a97ad;
+  box-shadow:none;
+  color:inherit
+}
+
+details.rojo,details.azul,details.lima,details.amarillo,details.sapote{
+  box-shadow:none
+}
+
+summary{
+  font-weight:700;
+  font-size:1.2rem;
+  cursor:pointer
+}
+
+details:hover,.card:hover{
+  transform:translateY(-4px)
+}
+
+details,.card{
+  transition:transform .2s
+}
+
+.chips span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(127,127,127,.18);
+  padding:4px 12px;
+  margin:3px;
+  border-radius:20px;
+  font-size:.9rem
+}
+
+.chips img{
+  width:22px
+}
+
+.foto{
+  width:300px;
+  height:300px;
+  max-width:100%;
+  object-fit:cover;
+  display:block;
+  margin:20px auto;
+  border-radius:12px;
+  border:4px solid var(--lima);
+}
+
+.futuro{
+  border:2px dashed var(--sapote)
+}
+
+ul{
+  padding-left:20px
+}
+
+/* ===== 5. MENÚ ===== */
+.menu{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:10;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 5%;
+  background:var(--azul);
+  color:#fff
+}
+
+.menu a{
+  color:#fff;
+  text-decoration:none
+}
+
+.logo{
+  font-weight:800;
+  font-size:1.3rem
+}
+
+#enlaces a{
+  margin-left:14px;
+  font-size:.9rem
+}
+
+#enlaces a:hover{
+  color:var(--lima)
+}
+
+#boton-menu{
+  display:none;
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:1.8rem;
+  cursor:pointer
+}
+
+
+/* ===== 6. INICIO ===== */
+.inicio{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  padding-top:100px
+}
+
+.inicio img{
+  width:280px;
+  border-radius:20px;
+  border:5px solid var(--lima);
+  animation:entrar 1.2s ease-out
+}
+
+.inicio h1{
+  font-size:clamp(2rem,6vw,3.4rem);
+  line-height:1.1
+}
+
+.inicio div{
+  max-width:520px
+}
+
+@keyframes entrar{from{transform:translateX(-120px);opacity:0}}
+
+
+/* ===== 7. FORMACIÓN (línea de tiempo) ===== */
+.linea{
+  border-left:5px solid var(--lima);
+  padding-left:20px
+}
+
+.linea div{
+  margin-bottom:20px
+}
+
+/* ===== 8. CONTACTO ===== */
+form{
+  max-width:480px;margin-top:20px
+}
+
+input,textarea{
+  display:block;
+  width:100%;
+  margin-bottom:12px;
+  padding:12px;
+  border:2px solid #cfd6e2;
+  border-radius:10px;
+  font:inherit
+}
+
+footer{
+  background:var(--azul);
+  color:#fff;
+  text-align:center;
+  padding:20px
+}
+
+/* ===== 9. CELULAR Y TABLET: el menú se vuelve hamburguesa ===== */
+@media(max-width:1100px){
+
+  #boton-menu{
+    display:block
+  }
+
+  #enlaces{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--azul);
+    flex-direction:column
+  }
+
+  #enlaces.abierto{
+    display:flex
+  }
+
+  #enlaces a{
+    margin:0;
+    padding:14px 5%;
+    border-top:1px solid #1d3b66
+  }
+
+}
